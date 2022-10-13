@@ -69,7 +69,7 @@
               <div class="Title" class="About" onclick="openAbout()">
                 About
               </div>
-              <div id="About-text" class="text">
+              <div id="About-text" class="text" style="display: none;">
                 Bimster is tech and arch company Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                 and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
                 sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -80,7 +80,7 @@
               <div class="Title" class="Services" onclick="openServices()">
                 Services
               </div>
-              <div id="Services-text">
+              <div id="Services-text" style="display: none;">
                 <div class="text-bold">Education</div>
                 <div class="text">
                   Learn how to use Revit to tackle your projects. Standard course programs and customized lessons for everyone. We will help you to implement software in to your workflow.
@@ -139,7 +139,7 @@
 
                 if (window.screen.width < 850) {
                   document.getElementById("mySidenav").style.width = "0";
-                  const myTimeout = setTimeout(logoON, 1000);
+                  const myTimeout = setTimeout(logoON, 300);
 
                   function logoON() {
                     document.getElementById("logo-container").style.width = "100%"
