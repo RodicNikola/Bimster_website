@@ -1,0 +1,215 @@
+body {
+  display: block;
+  margin: 0;
+  /* Ovde namestiti font */
+  font-family: 'Roboto', sans-serif;
+}
+
+#myVideo {
+  position: fixed;
+  /* right: 0;
+  bottom: 0; */
+  margin-left: 50vw;
+  transform: translate(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+#close_menu_button {
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 45px;
+  z-index: 1;
+  display: none;
+}
+
+
+#open_menu_button {
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 45px;
+  z-index: 1;
+  display: flex;
+}
+
+/* #open_menu_button:hover {
+  opacity: 0;
+} */
+
+#open_menu_button_white {
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 45px;
+  z-index: 1;
+  display: flex;
+  color: white;
+}
+
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logo {
+  height: 120px;
+  font-family: 'DM Sans', sans-serif;
+  font-size:120px;
+  color: black;
+  /* text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc; */
+  -webkit-text-stroke-width: 0.1vh;
+  -webkit-text-stroke-color: white;
+}
+
+@media (max-width: 850px) {
+  .logo {
+    font-size:90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo {
+    font-size:70px;
+    height: 70px;
+  }
+}
+
+.Motto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1.25vw;
+  width: 480px;
+}
+
+@media (max-width: 850px) {
+  .Motto {
+    width: 320px;
+  }
+}
+
+@media (max-width: 450px) {
+  .Motto {
+    width: 280px;
+  }
+}
+
+.divhr {
+  display: inline-block;
+  width: 100%;
+
+
+}
+.Mottotext {
+  display: inline-block;
+  white-space: nowrap;
+  color: black;
+  font-size: 2.1vh;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-left: 1vh;
+  margin-right: 1vh;
+  margin-top: 10px;
+  padding-left: 1.6vh;
+  padding-right: 1.6vh;
+  padding-top: 0.3vh;
+  padding-bottom: 0.3vh;
+}
+
+/* .Motto hr {
+  position: relative;
+  top: 2px;
+  height: 2px;
+  border-width: 0;
+  background-color: rgb(27, 38, 44);
+  width: 7vw;
+}
+
+.Motto p {
+  display: inline-block;
+  color: black;
+  font-size: 2.1vh;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-left: 1vh;
+  margin-right: 1vh;
+  padding-left: 1.6vh;
+  padding-right: 1.6vh;
+  padding-top: 0.3vh;
+  padding-bottom: 0.3vh;
+} */
+
+.main {
+  display: flex;
+  height: 100vh;
+  justify-content: flex-end;
+}
+
+
+.sidenav {
+  width: 0px;
+  top: 0;
+  right: 0;
+  background: rgba(246, 245, 245, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-left: 1px solid black;
+}
+@media (max-width: 850px) {
+  .sidenav {
+    border: none;
+  }
+}
+
+
+.Title {
+  font-family: 'Roboto', sans-serif;
+  padding: 8px 30px 8px 30px;
+  width: 100%;
+  text-decoration: none;
+  font-size: 25px;
+  color: #3282B8;
+  display: block;
+  transition: 0.3s;
+  line-height: 150%;
+  cursor:pointer;
+}
+
+.Title:hover {
+  color: #D3E0EA;
+}
+
+.text {
+  font-family: 'Roboto', sans-serif;
+  list-style-type: none;
+  text-indent: 30px;
+  padding: 8px 30px 8px 30px;
+  text-align: justify;
+  line-height: 150%;
+}
+#About-text {
+display: none;
+}
+#Services-text {
+  display: none;
+}
+#Contact-text {
+  display: block;
+}
+
+.text-bold{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  list-style-type: none;
+  padding: 8px 30px 8px 30px;
+  text-align: justify;
+}

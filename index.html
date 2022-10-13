@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bimster I Your BIM partner</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+  <video autoplay muted id="myVideo">
+    <source src="Images&Video\Video_Backgorund.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+
+  <! ╌ ovo je dugme za otvaranje/zatvarnje menija ╌>
+    <!-- <span id="open_menu_button" style="font-size:50px;cursor:pointer"
+    onclick="openNav()">&#9776;</span> -->
+    <div id="open_menu_button" style="font-size:3.2vh;cursor:pointer;" onclick="openNav()">Menu <img style="width: 3.2vh;margin-left:10px;" src="Images&Video\menu.png" alt="=" /></div>
+
+    <!-- <div id="open_menu_button_white" style="font-size:3.2vh;cursor:pointer;" onclick="openNav()">Menu <img style="width: 3.2vh;margin-left:10px;" src="Images&Video\menuWhite.png" alt="=" /></div> -->
+
+    <div href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="close_menu_button" style="font-size:2.2vh;cursor:pointer" onclick="openNav()"><img style="width: 2vh;margin-left:5px;" src="Images&Video\close.png" alt="X" /></div>
+
+    <div class="main" id="main">
+
+      <!-- <! ╌ ovo je Logo ╌>
+        <div class="logo-container">
+          <div class="logo">
+            BIMSTER
+          </div>
+          <div class="Motto">
+            <hr>
+            <p>Your BIM partner</p>
+            <hr>
+          </div>
+        </div> -->
+
+      <! ╌ ovo je Logo ╌>
+        <div class="logo-container" id="logo-container">
+          <div class="logo" id="logo">
+            BIMSTER
+          </div>
+          <div class="Motto" id="Motto">
+            <div class="divhr">
+              <hr style="border: 0.5px solid rgb(27, 38, 44);position: relative;
+                top: 4px;">
+            </div>
+            <div class="Mottotext">
+              Your BIM partner
+            </div>
+            <div class="divhr">
+              <hr style="border: 0.5px solid rgb(27, 38, 44);position: relative;
+                top: 4px;">
+            </div>
+          </div>
+        </div>
+
+
+        <! ╌ ovo je meni ╌>
+          <div id="mySidenav" class="sidenav">
+
+            <div class="About-div">
+              <div class="Title" class="About" onclick="openAbout()">
+                About
+              </div>
+              <div id="About-text" class="text">
+                Bimster is tech and arch company Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </div>
+            </div>
+
+            <div class="Services-div">
+              <div class="Title" class="Services" onclick="openServices()">
+                Services
+              </div>
+              <div id="Services-text">
+                <div class="text-bold">Education</div>
+                <div class="text">
+                  Learn how to use Revit to tackle your projects. Standard course programs and customized lessons for everyone. We will help you to implement software in to your workflow.
+                </div>
+                <div class="text-bold">Revit modeling</div>
+                <div class="text">
+                  Transferring sketches and 2D CAD drawings to 3D RVT models. Point-cloud based 3D modeling. Architectural set drawings creation.
+                </div>
+                <div class="text-bold">BIM coordination</div>
+                <div class="text">
+                  We provide services of clash detection, model coordination, quantity takeoffs, project time scheduling, project cost planning.
+                </div>
+                <div class="text-bold">Dynamo scripting</div>
+                <div class="text">
+                  Order a custom Dynamo script. Automatize your Revit work and save time. Export and Import data to your Revit model. We can also help you make parametric shape architecture.
+                </div>
+              </div>
+            </div>
+
+            <div class="Contact-div">
+              <div class="Title" class="Contact" onclick="openContact()">
+                Contact
+              </div>
+              <div id="Contact-text" class="text" style="text-indent: 0;">
+                E-mail:<br> <span style="font-weight: bold">rodic.nikola@hotmail.com</span>
+                <br><br>Folow Bimster on: <br><span style="font-weight: bold">Youtube</span> <br><span style="font-weight: bold">LinkedIn</span>
+              </div>
+            </div>
+
+          </div>
+
+
+          <! ╌ ovo je skripta za meni da izlazi i nestaje ╌>
+            <script>
+              function openNav() {
+                document.getElementById("open_menu_button").style.display = "none";
+                document.getElementById("close_menu_button").style.display = "flex";
+
+                if (window.screen.width < 850) {
+                  // document.getElementById("main").style.justifyContent = "flex-end";
+                  // document.getElementById("mySidenav").style.border = "none";
+                  document.getElementById("mySidenav").style.width = "100%";
+                  document.getElementById("logo").style.display = "none";
+                  document.getElementById("Motto").style.display = "none";
+                  document.getElementById("logo-container").style.width = "0";
+                } else {
+                  document.getElementById("mySidenav").style.width = "50vw";
+                }
+              }
+
+
+              function closeNav() {
+
+                document.getElementById("open_menu_button").style.display = "flex";
+                document.getElementById("close_menu_button").style.display = "none";
+
+                if (window.screen.width < 850) {
+                  document.getElementById("mySidenav").style.width = "0";
+                  const myTimeout = setTimeout(logoON, 1000);
+
+                  function logoON() {
+                    document.getElementById("logo-container").style.width = "100%"
+                    document.getElementById("logo").style.display = "inline-block";
+                    document.getElementById("Motto").style.display = "flex";
+                  }
+                } else {
+                  document.getElementById("mySidenav").style.width = "0";
+                }
+              }
+
+
+
+
+
+              function openAbout() {
+                var x = document.getElementById("About-text");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+              }
+
+
+
+              function openServices() {
+                var x = document.getElementById("Services-text");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+              }
+
+              function openContact() {
+                var x = document.getElementById("Contact-text");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+              }
+            </script>
+
+
+
+
+
+</body>
+
+</html>
