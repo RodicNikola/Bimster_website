@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet"> -->
@@ -73,9 +74,19 @@
                 About
               </div>
               <div id="About-text" class="text" style="display: none;">
-                Bimster is tech and arch company Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Bimster is architectural design and consultancy firm specialized in BIM (Building information modeling) technologies. We support individuals and companies in their project challenges. Building construction software industry is
+                developing at fast speed and requires up to date knowledge. Complex geometries, fast pace of projects and short deadlines require proficient technical skills to deliver successful BIM project. Bimster will make sure you do. We offer
+                variety of services based on BIM technologies to help our clients make better buildings.
+              </div>
+            </div>
+
+            <div class="WhatIsBIM-div">
+              <div class="Title" class="WhatIsBIM" onclick="openWhatIsBIM()">
+                What is BIM?
+              </div>
+              <div id="WhatIsBIM-text" class="text" style="display: none;">
+                BIM is an acronym for Building Information Modeling or Building Information Management. It is a highly collaborative process that allows architects, engineers, real estate developers, contractors, manufacturers, and other construction
+                professionals to plan, design, and construct a structure or building within one 3D model.
               </div>
             </div>
 
@@ -84,21 +95,29 @@
                 Services
               </div>
               <div id="Services-text" style="display: none;">
-                <div class="text-bold">Education</div>
+                <div class="text-bold">Architectural design</div>
                 <div class="text">
-                  Learn how to use Revit to tackle your projects. Standard course programs and customized lessons for everyone. We will help you to implement software in to your workflow.
+                  Bimster is a company with architectural background. Architectural design with BIM tools is best way to reduce development phase errors and reduce building cost. We provide architectural building design and interior design services.
                 </div>
-                <div class="text-bold">Revit modeling</div>
+                <div class="text-bold">BIM Management & Coordination </div>
                 <div class="text">
-                  Transferring sketches and 2D CAD drawings to 3D RVT models. Point-cloud based 3D modeling. Architectural set drawings creation.
+                  Setting up BIM project on right track from beginning is crucial to harvest all benefits of this kind of workflow. We will make sure you are set to go from your starting template to the end deliverable. Some of coordination services
+                  we provide are: interdisciplinary model coordination, clash detection, quantity takeoffs, project time scheduling, project cost planning.
                 </div>
-                <div class="text-bold">BIM coordination</div>
+                <div class="text-bold">Dynamo scripting </div>
                 <div class="text">
-                  We provide services of clash detection, model coordination, quantity takeoffs, project time scheduling, project cost planning.
+                  Looking for a dynamo script to automate your repetitive work? Bimster is creating custom script and Dynamo nodes for your tasks. Use power of visual programing to automate Revit drafting process, manipulate and extract data or
+                  create complex geometries.
                 </div>
-                <div class="text-bold">Dynamo scripting</div>
+                <div class="text-bold">Revit modeling </div>
                 <div class="text">
-                  Order a custom Dynamo script. Automatize your Revit work and save time. Export and Import data to your Revit model. We can also help you make parametric shape architecture.
+                  Service created for companies that are looking to delegate Revit modeling and drafting tasks. Bimster can be your reliable partner. Revit modeling based on sketches, CAD drawings, Point clouds are just some of the medium that we can
+                  convert to Revit models.
+                </div>
+                <div class="text-bold">Education </div>
+                <div class="text">
+                  Want to learn Autodesk Revit? We would be glad to share our knowledge with you. Bimster is offering online basic and advance Autodesk courses. Also, for each individual we can tailor individual lessons and real-life project
+                  implementation examples.
                 </div>
               </div>
             </div>
@@ -108,8 +127,8 @@
                 Contact
               </div>
               <div id="Contact-text" class="text" style="text-indent: 0;">
-                E-mail:<br> <span style="font-weight: bold">rodic.nikola@hotmail.com</span>
-                <br><br>Folow Bimster on: <br><span style="font-weight: bold">Youtube</span> <br><span style="font-weight: bold">LinkedIn</span>
+                E-mail:<br> <span style="font-weight: bold">office@bimster.net</span>
+                <br><br>Folow Bimster on: <br><span style="font-weight: bold">Youtube</span> <br><span style="font-weight: bold"><a href="https://www.linkedin.com/company/bimster/" style="color:black;text-decoration:none">LinkedIn</a></span>
               </div>
             </div>
 
@@ -160,6 +179,15 @@
 
               function openAbout() {
                 var x = document.getElementById("About-text");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+              }
+
+              function openWhatIsBIM() {
+                var x = document.getElementById("WhatIsBIM-text");
                 if (x.style.display === "none") {
                   x.style.display = "block";
                 } else {
