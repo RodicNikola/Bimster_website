@@ -20,7 +20,7 @@ body {
   align-items: center;
   position: fixed;
   top: 20px;
-  right: 45px;
+  right: 25px;
   z-index: 1;
   display: none;
 }
@@ -30,7 +30,7 @@ body {
   align-items: center;
   position: fixed;
   top: 20px;
-  right: 45px;
+  right: 25px;
   z-index: 1;
   display: flex;
 }
@@ -64,8 +64,9 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-size:120px;
   color: black;
+  /* font-weight: bold; */
   /* text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc; */
-  -webkit-text-stroke-width: 0.1vh;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
 }
 
@@ -87,7 +88,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 1.25vw;
+  min-height: 24px;
   width: 480px;
 }
 
@@ -110,19 +111,30 @@ body {
 
 }
 .Mottotext {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 100;
   display: inline-block;
   white-space: nowrap;
   color: black;
-  font-size: 2.1vh;
+  font-size: 24px;
   font-style: italic;
-  background-color: rgba(255, 255, 255, 0.4);
-  margin-left: 1vh;
+  text-shadow: 0 0 1px gray;
+  /* background-color: rgba(255, 255, 255, 0.4); */
+  /* margin-left: 1vh;
   margin-right: 1vh;
-  margin-top: 10px;
-  padding-left: 1.6vh;
-  padding-right: 1.6vh;
-  padding-top: 0.3vh;
-  padding-bottom: 0.3vh;
+  margin-top: 10px; */
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 5px;
+}
+
+@media (max-width: 850px) {
+  .Mottotext {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+  }
 }
 
 /* .Motto hr {
